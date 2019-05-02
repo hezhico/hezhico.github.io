@@ -15,16 +15,19 @@
 
 
 
+<meta name="description" content="css元素类型css 盒模型  .box {     box-sizing: border-box;   }">
 <meta name="keywords" content="万里长征始于足下，静心总结code">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css基础特性-第一章">
 <meta property="og:url" content="http://yoursite.com/2019/04/28/css01/index.html">
 <meta property="og:site_name" content="何志个人博客">
+<meta property="og:description" content="css元素类型css 盒模型  .box {     box-sizing: border-box;   }">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1157035/201904/1157035-20190428231658350-2094125163.jpg">
-<meta property="og:updated_time" content="2019-04-28T15:17:43.318Z">
+<meta property="og:updated_time" content="2019-05-02T09:52:36.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css基础特性-第一章">
+<meta name="twitter:description" content="css元素类型css 盒模型  .box {     box-sizing: border-box;   }">
 <meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1157035/201904/1157035-20190428231658350-2094125163.jpg">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -55,7 +58,46 @@
 
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+<style lang>
+code.has-numbering {
+  margin-left: 10px;
+  word-wrap: normal;
+  word-break: keep-all;
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: auto;
+  word-break: keep-all;
+  white-space: pre;
+}
 
+.pre-numbering {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  padding: .5em 0.2em .5em 0;
+  border-right: 1px solid #C3CCD0;
+  border-radius: 3px 0 0 3px;
+  background-color: #EEE;
+  text-align: right;
+  font-size: 1.0em;
+  color: #AAA;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  .pre-numbering {
+    display: none;
+  }
+  .has-numbering {
+    margin-left: -10px !important;
+    word-wrap: break-world !important;
+    white-space: pre-wrap !important;
+  }
+}
+</style>
 
 <title>css基础特性-第一章 | 何志个人博客</title>
 
@@ -73,7 +115,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        // search: 
     }
 </script>
 
@@ -298,6 +340,10 @@
       
           
         <p><img src="https://img2018.cnblogs.com/blog/1157035/201904/1157035-20190428231658350-2094125163.jpg" alt="你想输入的替代文字"></p>
+<h2 id="css元素类型"><a href="#css元素类型" class="headerlink" title="css元素类型"></a>css元素类型</h2><h3 id="css-盒模型"><a href="#css-盒模型" class="headerlink" title="css 盒模型"></a>css 盒模型</h3><pre><code class="css">  .box {
+    box-sizing: border-box;
+  }
+</code></pre>
 
       
     </div>
@@ -309,7 +355,7 @@
         <p><span>本文标题:</span><a href="/2019/04/28/css01/">css基础特性-第一章</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">大志 何</a></p>
         <p><span>发布时间:</span>2019-04-28, 21:53:45</p>
-        <p><span>最后更新:</span>2019-04-28, 23:17:43</p>
+        <p><span>最后更新:</span>2019-05-02, 17:52:36</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/04/28/css01/" title="css基础特性-第一章">http://yoursite.com/2019/04/28/css01/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/04/28/css01/　　作者: 大志 何" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -323,6 +369,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/04/29/flutter-api/">
+                    flutter-api
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -339,7 +391,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#css元素类型"><span class="toc-number">1.</span> <span class="toc-text">css元素类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#css-盒模型"><span class="toc-number">1.1.</span> <span class="toc-text">css 盒模型</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -409,7 +461,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/04/29/flutter-api/" title="上一篇: flutter-api">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -421,7 +475,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/04/28/css01/">css基础特性-第一章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/28/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/05/02/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/29/flutter-api/">flutter-api</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/28/css01/">css基础特性-第一章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/28/hello-world/">Hello World</a></li></ul>
 
 
 
@@ -441,24 +495,6 @@
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style="display:none">
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style="display:none">
-                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
         
     </div>
 </footer>
@@ -513,8 +549,13 @@
     
 </script>
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
   </div>
+
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
 </body>
 </html>

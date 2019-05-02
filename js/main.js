@@ -91,7 +91,8 @@ require([], function (){
                 "pulse", "fadeIn","fadeInRight", "flipInX", "lightSpeedIn","rotateInUpLeft", "slideInUp","zoomIn",
                 ],
                 len = animationNames.length,
-                randomAnimationName = animationNames[Math.ceil(Math.random() * len) - 1];
+                // randomAnimationName = animationNames[Math.ceil(Math.random() * len) - 1];
+                randomAnimationName = 'zoomIn'
 
                 // Fallback (CSS3 keyframe, requestAnimationFrame)
                 if (!window.requestAnimationFrame) {
@@ -134,7 +135,7 @@ require([], function (){
             $('.body-wrap > article').css({opacity: 1});
         }
     }
-
+    
     // TOC
     if (yiliaConfig.toc) {
         require(['toc'], function(){ })
