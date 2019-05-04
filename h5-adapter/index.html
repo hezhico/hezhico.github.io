@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="何志个人博客">
 <meta property="og:description" content="主要是对工作中遇到的适配问题做一个备注">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-02T12:39:17.397Z">
+<meta property="og:updated_time" content="2019-05-04T07:49:15.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="h5-adapter">
 <meta name="twitter:description" content="主要是对工作中遇到的适配问题做一个备注">
@@ -199,6 +199,8 @@ code.has-numbering {
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
+                            <li><a href="/h5-adapter/">h5适配</a></li>
+                        
                             <li><a href="/tags/">标签云</a></li>
                         
                             <li><a href="/about/">关于我</a></li>
@@ -273,6 +275,8 @@ code.has-numbering {
                     <li><a href="/">主页</a></li>
                 
                     <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/h5-adapter/">h5适配</a></li>
                 
                     <li><a href="/tags/">标签云</a></li>
                 
@@ -353,6 +357,8 @@ code.has-numbering {
           
         <p>主要是对工作中遇到的适配问题做一个备注<br><a id="more"></a></p>
 <h3 id="手机号码在ios自动显示蓝色"><a href="#手机号码在ios自动显示蓝色" class="headerlink" title="手机号码在ios自动显示蓝色"></a>手机号码在ios自动显示蓝色</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> // head标签中添加如下代码</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span> = <span class="string">"format-detection"</span> <span class="attr">content</span> = <span class="string">"telephone=no"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="去掉点击链接和文本框对象时默认的灰色半透明覆盖层-iOS-或者虚框-Android"><a href="#去掉点击链接和文本框对象时默认的灰色半透明覆盖层-iOS-或者虚框-Android" class="headerlink" title="去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android)"></a>去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android)</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-tap-highlight-color:rgba(0,0,0,0); //透明度设置为0，</span><br></pre></td></tr></table></figure>
+<h3 id="ios-input-聚焦文本框-光标过大"><a href="#ios-input-聚焦文本框-光标过大" class="headerlink" title="ios input 聚焦文本框 光标过大"></a>ios input 聚焦文本框 光标过大</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">Android</span> 光标 14<span class="selector-tag">px</span>   <span class="selector-tag">ios</span> 光标 40<span class="selector-tag">px</span></span><br><span class="line"></span><br><span class="line">文本框内容上下居中，不要使用<span class="selector-tag">line-height</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
