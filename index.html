@@ -303,6 +303,121 @@ code.has-numbering {
 </nav>
       <div class="body-wrap">
   
+    <article id="post-vue实战" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/05/13/vue实战/" class="article-date">
+      <time datetime="2019-05-13T13:39:35.000Z" itemprop="datePublished">2019-05-13</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/13/vue实战/">vue实战</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="vue-history模式实践"><a href="#vue-history模式实践" class="headerlink" title="vue history模式实践"></a>vue history模式实践</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">location ~* <span class="regexp">/h5bill &#123; </span></span><br><span class="line"><span class="regexp">   access_log  /</span>opt/nginx<span class="number">-1.4</span><span class="number">.7</span>/logs/h5bill/h5bill.log; </span><br><span class="line">  alias  /opt/nginx<span class="number">-1.4</span><span class="number">.7</span>/html/ued/h5bill; </span><br><span class="line">   try_files $uri $uri /h5bill/<span class="keyword">static</span>/index.html; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">## 前端路径修改</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> 设置根目录 index.html</span><br><span class="line">&lt;base href=<span class="string">"/h5bill/"</span>&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript02" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/05/13/javascript02/" class="article-date">
+      <time datetime="2019-05-13T13:19:22.000Z" itemprop="datePublished">2019-05-13</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/13/javascript02/">javascript02</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><blockquote>
+<p>javascript 基本数据类型 string number boolean null undefined</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _toString = <span class="built_in">Object</span>.prototype.toString;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="keyword">typeof</span> value</span><br><span class="line">  <span class="keyword">let</span> result1 = _toString.call(value)</span><br><span class="line">  <span class="built_in">document</span>.body.innerHTML = <span class="built_in">document</span>.body.innerHTML +<span class="string">"&lt;br&gt;"</span> + </span><br><span class="line">  <span class="string">"typeof :: "</span> + result + <span class="string">' || '</span> + <span class="string">'toString :: '</span> + result1</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 字符串类型</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"abc"</span>;</span><br><span class="line"><span class="comment">// 检测类型</span></span><br><span class="line">log(str);</span><br><span class="line"><span class="comment">// 数字类型</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">123</span>;</span><br><span class="line"><span class="comment">// 检测类型</span></span><br><span class="line">log(num);</span><br><span class="line"><span class="comment">// 布尔类型</span></span><br><span class="line"><span class="keyword">var</span> bool = <span class="literal">true</span>;</span><br><span class="line">log(bool)</span><br><span class="line"><span class="comment">// undefine</span></span><br><span class="line"><span class="keyword">var</span> un = <span class="literal">undefined</span></span><br><span class="line"><span class="keyword">var</span> unde; <span class="comment">// 只申明未赋值</span></span><br><span class="line">log(un)</span><br><span class="line">log(unde)</span><br><span class="line"><span class="comment">// 空对象</span></span><br><span class="line"><span class="keyword">var</span> isnull = <span class="literal">null</span>;</span><br><span class="line">log(isnull)</span><br><span class="line"><span class="comment">// 特殊数字类型NaN</span></span><br><span class="line"><span class="keyword">var</span> <span class="built_in">isNaN</span> = <span class="built_in">Math</span>.pow(<span class="string">'2'</span>);</span><br><span class="line">log(<span class="built_in">isNaN</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/13/javascript02/type.png"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-javascript01" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -400,6 +515,18 @@ code.has-numbering {
 <li>内存缓存（Memory Cache）<blockquote>
 <p>内存缓存中包含了大量的资源</p>
 </blockquote>
+</li>
+</ol>
+<h3 id="http状态"><a href="#http状态" class="headerlink" title="http状态"></a>http状态</h3><h4 id="成功"><a href="#成功" class="headerlink" title="成功"></a>成功</h4><ol>
+<li>200 成功</li>
+<li>204 no-content 没有内容</li>
+</ol>
+<h4 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h4><ol>
+<li><p>301 永久重定向 比较常用的场景是使用域名跳转，或者服务端控制跳转</p>
+</li>
+<li><p>302 临时重定向 404 未登录或者登陆失效 临时跳转404页面</p>
+</li>
+<li><p>304 no-modify 协商缓存验证有效，服务验证缓存有效返回状态</p>
 </li>
 </ol>
 
