@@ -23,7 +23,7 @@
 <meta property="og:description" content="基本数据类型 javascript 基本数据类型 string number boolean null undefined  1234567891011121314151617181920212223242526272829var _toString = Object.prototype.toString;function log(value)&amp;#123;  let result = typeof">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/05/13/javascript02/type.png">
-<meta property="og:updated_time" content="2019-05-13T13:38:07.267Z">
+<meta property="og:updated_time" content="2019-05-15T14:48:34.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript02">
 <meta name="twitter:description" content="基本数据类型 javascript 基本数据类型 string number boolean null undefined  1234567891011121314151617181920212223242526272829var _toString = Object.prototype.toString;function log(value)&amp;#123;  let result = typeof">
@@ -343,6 +343,30 @@ code.has-numbering {
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _toString = <span class="built_in">Object</span>.prototype.toString;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="keyword">typeof</span> value</span><br><span class="line">  <span class="keyword">let</span> result1 = _toString.call(value)</span><br><span class="line">  <span class="built_in">document</span>.body.innerHTML = <span class="built_in">document</span>.body.innerHTML +<span class="string">"&lt;br&gt;"</span> + </span><br><span class="line">  <span class="string">"typeof :: "</span> + result + <span class="string">' || '</span> + <span class="string">'toString :: '</span> + result1</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 字符串类型</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"abc"</span>;</span><br><span class="line"><span class="comment">// 检测类型</span></span><br><span class="line">log(str);</span><br><span class="line"><span class="comment">// 数字类型</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">123</span>;</span><br><span class="line"><span class="comment">// 检测类型</span></span><br><span class="line">log(num);</span><br><span class="line"><span class="comment">// 布尔类型</span></span><br><span class="line"><span class="keyword">var</span> bool = <span class="literal">true</span>;</span><br><span class="line">log(bool)</span><br><span class="line"><span class="comment">// undefine</span></span><br><span class="line"><span class="keyword">var</span> un = <span class="literal">undefined</span></span><br><span class="line"><span class="keyword">var</span> unde; <span class="comment">// 只申明未赋值</span></span><br><span class="line">log(un)</span><br><span class="line">log(unde)</span><br><span class="line"><span class="comment">// 空对象</span></span><br><span class="line"><span class="keyword">var</span> isnull = <span class="literal">null</span>;</span><br><span class="line">log(isnull)</span><br><span class="line"><span class="comment">// 特殊数字类型NaN</span></span><br><span class="line"><span class="keyword">var</span> <span class="built_in">isNaN</span> = <span class="built_in">Math</span>.pow(<span class="string">'2'</span>);</span><br><span class="line">log(<span class="built_in">isNaN</span>);</span><br></pre></td></tr></table></figure>
 <p><img src="/2019/05/13/javascript02/type.png"></p>
+<h3 id="字符串的常规操作方法"><a href="#字符串的常规操作方法" class="headerlink" title="字符串的常规操作方法"></a>字符串的常规操作方法</h3><ol>
+<li>substring(start, end) 截取制定索引的字符串</li>
+<li>split() 按照指定的标识符将字符分割成数组</li>
+<li>indexOf() 寻找指定字符串的索引，未匹配到返回-1</li>
+<li>replace()</li>
+<li>String() 将指定目标转化成字符串<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.toSring() // 程序报错</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="数组的常用方法"><a href="#数组的常用方法" class="headerlink" title="数组的常用方法"></a>数组的常用方法</h3><ol>
+<li>forEach</li>
+<li>sort</li>
+<li>map</li>
+<li>shift  unshift</li>
+<li>pop    push</li>
+<li>concat</li>
+<li>Array.from()</li>
+<li>数组的去重</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>,<span class="number">12</span>,<span class="number">3</span>,<span class="number">3</span>])  <span class="comment">// =&gt; Set(3) &#123;1, 12, 3&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="对象的常用方法"><a href="#对象的常用方法" class="headerlink" title="对象的常用方法"></a>对象的常用方法</h3><ol>
+<li>对象的浅拷贝 Object.assign()</li>
+<li>Object.keys() Object.value() Object.entires()</li>
+<li>对象的解构赋值 const { name } = {name:hezhi, age: 18}</li>
+</ol>
 
       
     </div>
@@ -354,7 +378,7 @@ code.has-numbering {
         <p><span>本文标题:</span><a href="/2019/05/13/javascript02/">javascript02</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">大志 何</a></p>
         <p><span>发布时间:</span>2019-05-13, 21:19:22</p>
-        <p><span>最后更新:</span>2019-05-13, 21:38:07</p>
+        <p><span>最后更新:</span>2019-05-15, 22:48:34</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/05/13/javascript02/" title="javascript02">http://yoursite.com/2019/05/13/javascript02/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/05/13/javascript02/　　作者: 大志 何" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -390,7 +414,7 @@ code.has-numbering {
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本数据类型"><span class="toc-number">1.</span> <span class="toc-text">基本数据类型</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本数据类型"><span class="toc-number">1.</span> <span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串的常规操作方法"><span class="toc-number">2.</span> <span class="toc-text">字符串的常规操作方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的常用方法"><span class="toc-number">3.</span> <span class="toc-text">数组的常用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象的常用方法"><span class="toc-number">4.</span> <span class="toc-text">对象的常用方法</span></a></li></ol>
         
     </div>
     <style>
