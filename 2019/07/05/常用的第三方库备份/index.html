@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="策略模式–表单验证目的是为了简化表单验证的if嵌套，便于阅读理解 定义验证规则策略123456789101112131415class Strategy &amp;#123;  isNull(value, msg) &amp;#123;    if(!!!value)&amp;#123;      return msg    &amp;#125;  &amp;#125;  maxValue(value, target, msg) &amp;#1">
+<meta name="description" content="工具函数库   lodash    ui库   VUX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript设计模式之策略模式--表单验证">
-<meta property="og:url" content="http://yoursite.com/2019/05/10/javascript01/index.html">
+<meta property="og:title" content="常用的第三方库备份">
+<meta property="og:url" content="http://yoursite.com/2019/07/05/常用的第三方库备份/index.html">
 <meta property="og:site_name" content="何志个人博客">
-<meta property="og:description" content="策略模式–表单验证目的是为了简化表单验证的if嵌套，便于阅读理解 定义验证规则策略123456789101112131415class Strategy &amp;#123;  isNull(value, msg) &amp;#123;    if(!!!value)&amp;#123;      return msg    &amp;#125;  &amp;#125;  maxValue(value, target, msg) &amp;#1">
+<meta property="og:description" content="工具函数库   lodash    ui库   VUX">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-12T12:53:28.360Z">
+<meta property="og:updated_time" content="2019-07-05T00:51:45.604Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript设计模式之策略模式--表单验证">
-<meta name="twitter:description" content="策略模式–表单验证目的是为了简化表单验证的if嵌套，便于阅读理解 定义验证规则策略123456789101112131415class Strategy &amp;#123;  isNull(value, msg) &amp;#123;    if(!!!value)&amp;#123;      return msg    &amp;#125;  &amp;#125;  maxValue(value, target, msg) &amp;#1">
+<meta name="twitter:title" content="常用的第三方库备份">
+<meta name="twitter:description" content="工具函数库   lodash    ui库   VUX">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -96,7 +96,7 @@ code.has-numbering {
 }
 </style>
 
-<title>javascript设计模式之策略模式--表单验证 | 何志个人博客</title>
+<title>常用的第三方库备份 | 何志个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -300,11 +300,11 @@ code.has-numbering {
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-javascript01" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-常用的第三方库备份" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/05/10/javascript01/" class="article-date">
-      <time datetime="2019-05-09T16:04:13.000Z" itemprop="datePublished">2019-05-10</time>
+      <a href="/2019/07/05/常用的第三方库备份/" class="article-date">
+      <time datetime="2019-07-05T00:50:27.000Z" itemprop="datePublished">2019-07-05</time>
 </a>
 
 
@@ -319,7 +319,7 @@ code.has-numbering {
         
   
     <h1 class="article-title" itemprop="name">
-      javascript设计模式之策略模式--表单验证
+      常用的第三方库备份
     </h1>
   
 
@@ -336,9 +336,18 @@ code.has-numbering {
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>策略模式–表单验证目的是为了简化表单验证的if嵌套，便于阅读理解</p>
-<h3 id="定义验证规则策略"><a href="#定义验证规则策略" class="headerlink" title="定义验证规则策略"></a>定义验证规则策略</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Strategy</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  isNull(value, msg) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!!!value)&#123;</span><br><span class="line">      <span class="keyword">return</span> msg</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  maxValue(value, target, msg) &#123;</span><br><span class="line">    <span class="keyword">if</span>(value &gt; target) &#123;</span><br><span class="line">      <span class="keyword">return</span> msg</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="定义表单构造器"><a href="#定义表单构造器" class="headerlink" title="定义表单构造器"></a>定义表单构造器</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Validtor</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(strategies) &#123;</span><br><span class="line">    <span class="keyword">this</span>.cache = []</span><br><span class="line">    <span class="keyword">this</span>.strategies = strategies;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//添加验证规则</span></span><br><span class="line">  add(value,rules, errorMsg) &#123;</span><br><span class="line">    <span class="keyword">if</span>(typeOf rule === <span class="string">"string"</span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> ary = rules.split(<span class="string">':'</span>); <span class="comment">// 把 strategy 和参数分开</span></span><br><span class="line">      _this.cache.push(<span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="comment">// 把校验的步骤用空函数包装起来，并且放入 cache</span></span><br><span class="line">      <span class="keyword">const</span> strategy = ary.shift();<span class="comment">// 用户挑选的 strategy</span></span><br><span class="line">      ary.unshift(value); <span class="comment">// 把 input 的 value 添加进参数列表</span></span><br><span class="line">      ary.push(errorMsg); <span class="comment">// 把 errorMsg 添加进参数列表</span></span><br><span class="line">      <span class="keyword">return</span> _this.strategies[strategy].apply(<span class="literal">null</span>, ary);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">Object</span>.prototype.toString.call(rule) === <span class="string">'[object Array]'</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> _this = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; rule.length; index += <span class="number">1</span>) &#123;</span><br><span class="line">          (<span class="function"><span class="keyword">function</span> (<span class="params">rules</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">const</span> ary = rules.strategyname.split(<span class="string">':'</span>); <span class="comment">// 把 strategy 和参数分开</span></span><br><span class="line">            _this.cache.push(<span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="comment">// 把校验的步骤用空函数包装起来，并且放入 cache</span></span><br><span class="line">            <span class="keyword">const</span> strategy = ary.shift();<span class="comment">// 用户挑选的 strategy</span></span><br><span class="line">            ary.unshift(value); <span class="comment">// 把 input 的 value 添加进参数列表</span></span><br><span class="line">            ary.push(rules.errorMsg); <span class="comment">// 把 errorMsg 添加进参数列表</span></span><br><span class="line">            <span class="keyword">return</span> _this.strategies[strategy].apply(<span class="literal">null</span>, ary);</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125;(rule[index]));</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="keyword">this</span>.cache)</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">throw</span>(<span class="string">'rule type is valid'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 开始验证</span></span><br><span class="line">start() &#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>, i&lt; <span class="keyword">this</span>.cache.length, i++)&#123;</span><br><span class="line">    <span class="keyword">var</span> msg = <span class="keyword">this</span>.cache[i];</span><br><span class="line">    <span class="keyword">if</span>(msg)&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"表单验证失败"</span>);</span><br><span class="line">      <span class="keyword">return</span> msg;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"表单验证成功"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <ol>
+<li>工具函数库</li>
+</ol>
+<blockquote>
+<p><a href="https://www.lodashjs.com/" target="_blank">lodash</a> </p>
+</blockquote>
+<ol start="2">
+<li>ui库</li>
+</ol>
+<blockquote>
+<p><a href="https://doc.vux.li/zh-CN/" target="_blank">VUX</a></p>
+</blockquote>
 
       
     </div>
@@ -347,13 +356,13 @@ code.has-numbering {
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/05/10/javascript01/">javascript设计模式之策略模式--表单验证</a></p>
+        <p><span>本文标题:</span><a href="/2019/07/05/常用的第三方库备份/">常用的第三方库备份</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">大志 何</a></p>
-        <p><span>发布时间:</span>2019-05-10, 00:04:13</p>
-        <p><span>最后更新:</span>2019-05-12, 20:53:28</p>
+        <p><span>发布时间:</span>2019-07-05, 08:50:27</p>
+        <p><span>最后更新:</span>2019-07-05, 08:51:45</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/05/10/javascript01/" title="javascript设计模式之策略模式--表单验证">http://yoursite.com/2019/05/10/javascript01/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/05/10/javascript01/　　作者: 大志 何" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/07/05/常用的第三方库备份/" title="常用的第三方库备份">http://yoursite.com/2019/07/05/常用的第三方库备份/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/07/05/常用的第三方库备份/　　作者: 大志 何" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -365,16 +374,10 @@ code.has-numbering {
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/05/13/javascript02/">
-                    javascript基础备忘
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/05/04/http/">
-                    http相关知识点
+                <a href="/2019/05/20/1px/">
+                    1px 较好适配方案
                 </a>
             </div>
         
@@ -386,7 +389,7 @@ code.has-numbering {
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义验证规则策略"><span class="toc-number">1.</span> <span class="toc-text">定义验证规则策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义表单构造器"><span class="toc-number">2.</span> <span class="toc-text">定义表单构造器</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -422,7 +425,7 @@ code.has-numbering {
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"javascript设计模式之策略模式--表单验证　| 何志个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"常用的第三方库备份　| 何志个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -456,15 +459,13 @@ code.has-numbering {
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/05/13/javascript02/" title="上一篇: javascript基础备忘">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/05/04/http/" title="下一篇: http相关知识点">
+            <a href="/2019/05/20/1px/" title="下一篇: 1px 较好适配方案">
                 <i class="fa fa-angle-right"></i>
             </a>
         
