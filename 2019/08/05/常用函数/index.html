@@ -15,14 +15,17 @@
 
 
 
+<meta name="description" content="输入金额格式化123456789101112131415161718192021222324252627// 置空所有的非数字function  amountFormat(value) &amp;#123;  // 小数点计数  let countDot = 0;  // 格式化数字  let newValue;  // 保留一个小数点，其他小数点非数字置空  newValue = value.repla">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flutter-api">
-<meta property="og:url" content="http://yoursite.com/2019/04/29/flutter-api/index.html">
+<meta property="og:title" content="常用函数">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/常用函数/index.html">
 <meta property="og:site_name" content="何志个人博客">
+<meta property="og:description" content="输入金额格式化123456789101112131415161718192021222324252627// 置空所有的非数字function  amountFormat(value) &amp;#123;  // 小数点计数  let countDot = 0;  // 格式化数字  let newValue;  // 保留一个小数点，其他小数点非数字置空  newValue = value.repla">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-29T14:33:49.572Z">
+<meta property="og:updated_time" content="2019-08-05T00:44:30.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flutter-api">
+<meta name="twitter:title" content="常用函数">
+<meta name="twitter:description" content="输入金额格式化123456789101112131415161718192021222324252627// 置空所有的非数字function  amountFormat(value) &amp;#123;  // 小数点计数  let countDot = 0;  // 格式化数字  let newValue;  // 保留一个小数点，其他小数点非数字置空  newValue = value.repla">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -93,7 +96,7 @@ code.has-numbering {
 }
 </style>
 
-<title>flutter-api | 何志个人博客</title>
+<title>常用函数 | 何志个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -297,11 +300,11 @@ code.has-numbering {
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-flutter-api" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-常用函数" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/29/flutter-api/" class="article-date">
-      <time datetime="2019-04-29T14:33:49.000Z" itemprop="datePublished">2019-04-29</time>
+      <a href="/2019/08/05/常用函数/" class="article-date">
+      <time datetime="2019-08-05T00:42:15.000Z" itemprop="datePublished">2019-08-05</time>
 </a>
 
 
@@ -316,7 +319,7 @@ code.has-numbering {
         
   
     <h1 class="article-title" itemprop="name">
-      flutter-api
+      常用函数
     </h1>
   
 
@@ -333,7 +336,8 @@ code.has-numbering {
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h3 id="输入金额格式化"><a href="#输入金额格式化" class="headerlink" title="输入金额格式化"></a>输入金额格式化</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 置空所有的非数字</span></span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="title">amountFormat</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 小数点计数</span></span><br><span class="line">  <span class="keyword">let</span> countDot = <span class="number">0</span>;</span><br><span class="line">  <span class="comment">// 格式化数字</span></span><br><span class="line">  <span class="keyword">let</span> newValue;</span><br><span class="line">  <span class="comment">// 保留一个小数点，其他小数点非数字置空</span></span><br><span class="line">  newValue = value.replace(<span class="regexp">/\D/g</span>, (old, newval) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(old, newval);</span><br><span class="line">    <span class="keyword">if</span> (old === <span class="string">'.'</span> &amp;&amp; countDot &lt; <span class="number">1</span>) &#123;</span><br><span class="line">      countDot += <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">return</span> old === <span class="string">'.'</span> ? <span class="string">'.'</span> : <span class="string">''</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">// 当第一位为. 0的时候</span></span><br><span class="line">  <span class="keyword">if</span> (newValue === <span class="string">'.'</span>) &#123;</span><br><span class="line">    newValue = <span class="string">'0.'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 保留两位小数</span></span><br><span class="line">  <span class="keyword">if</span> (newValue.indexOf(<span class="string">'.'</span>) !== <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> index = newValue.indexOf(<span class="string">'.'</span>);</span><br><span class="line">    newValue = newValue.substring(<span class="number">0</span>, index + <span class="number">3</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.amount);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newValue</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="闭包实践-设置私有变量"><a href="#闭包实践-设置私有变量" class="headerlink" title="闭包实践 设置私有变量"></a>闭包实践 设置私有变量</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cls</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.a = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        getValue:<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span>.a</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> cls;</span><br><span class="line">o.getValue(); <span class="comment">//100</span></span><br><span class="line"><span class="comment">//a 在外面永远无法访问到</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -341,13 +345,13 @@ code.has-numbering {
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/29/flutter-api/">flutter-api</a></p>
+        <p><span>本文标题:</span><a href="/2019/08/05/常用函数/">常用函数</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">大志 何</a></p>
-        <p><span>发布时间:</span>2019-04-29, 22:33:49</p>
-        <p><span>最后更新:</span>2019-04-29, 22:33:49</p>
+        <p><span>发布时间:</span>2019-08-05, 08:42:15</p>
+        <p><span>最后更新:</span>2019-08-05, 08:44:30</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/29/flutter-api/" title="flutter-api">http://yoursite.com/2019/04/29/flutter-api/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/04/29/flutter-api/　　作者: 大志 何" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/05/常用函数/" title="常用函数">http://yoursite.com/2019/08/05/常用函数/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/08/05/常用函数/　　作者: 大志 何" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -359,16 +363,10 @@ code.has-numbering {
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/05/02/test/">
-                    test
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/28/css01/">
-                    css基础特性-第一章
+                <a href="/2019/07/05/常用的第三方库备份/">
+                    常用的第三方库备份
                 </a>
             </div>
         
@@ -380,7 +378,7 @@ code.has-numbering {
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#输入金额格式化"><span class="toc-number">1.</span> <span class="toc-text">输入金额格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#闭包实践-设置私有变量"><span class="toc-number">2.</span> <span class="toc-text">闭包实践 设置私有变量</span></a></li></ol>
         
     </div>
     <style>
@@ -416,7 +414,7 @@ code.has-numbering {
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"flutter-api　| 何志个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"常用函数　| 何志个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -450,15 +448,13 @@ code.has-numbering {
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/05/02/test/" title="上一篇: test">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/28/css01/" title="下一篇: css基础特性-第一章">
+            <a href="/2019/07/05/常用的第三方库备份/" title="下一篇: 常用的第三方库备份">
                 <i class="fa fa-angle-right"></i>
             </a>
         

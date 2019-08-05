@@ -303,6 +303,62 @@ code.has-numbering {
 </nav>
       <div class="body-wrap">
   
+    <article id="post-常用函数" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/08/05/常用函数/" class="article-date">
+      <time datetime="2019-08-05T00:42:15.000Z" itemprop="datePublished">2019-08-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/常用函数/">常用函数</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="输入金额格式化"><a href="#输入金额格式化" class="headerlink" title="输入金额格式化"></a>输入金额格式化</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 置空所有的非数字</span></span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="title">amountFormat</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 小数点计数</span></span><br><span class="line">  <span class="keyword">let</span> countDot = <span class="number">0</span>;</span><br><span class="line">  <span class="comment">// 格式化数字</span></span><br><span class="line">  <span class="keyword">let</span> newValue;</span><br><span class="line">  <span class="comment">// 保留一个小数点，其他小数点非数字置空</span></span><br><span class="line">  newValue = value.replace(<span class="regexp">/\D/g</span>, (old, newval) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(old, newval);</span><br><span class="line">    <span class="keyword">if</span> (old === <span class="string">'.'</span> &amp;&amp; countDot &lt; <span class="number">1</span>) &#123;</span><br><span class="line">      countDot += <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">return</span> old === <span class="string">'.'</span> ? <span class="string">'.'</span> : <span class="string">''</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">// 当第一位为. 0的时候</span></span><br><span class="line">  <span class="keyword">if</span> (newValue === <span class="string">'.'</span>) &#123;</span><br><span class="line">    newValue = <span class="string">'0.'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 保留两位小数</span></span><br><span class="line">  <span class="keyword">if</span> (newValue.indexOf(<span class="string">'.'</span>) !== <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> index = newValue.indexOf(<span class="string">'.'</span>);</span><br><span class="line">    newValue = newValue.substring(<span class="number">0</span>, index + <span class="number">3</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.amount);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newValue</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="闭包实践-设置私有变量"><a href="#闭包实践-设置私有变量" class="headerlink" title="闭包实践 设置私有变量"></a>闭包实践 设置私有变量</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cls</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.a = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        getValue:<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span>.a</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> cls;</span><br><span class="line">o.getValue(); <span class="comment">//100</span></span><br><span class="line"><span class="comment">//a 在外面永远无法访问到</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-常用的第三方库备份" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -342,7 +398,20 @@ code.has-numbering {
 <li>ui库</li>
 </ol>
 <blockquote>
-<p><a href="https://doc.vux.li/zh-CN/" target="_blank">VUX</a></p>
+<p><a href="https://doc.vux.li/zh-CN/" target="_blank">VUX</a> </p>
+</blockquote>
+<ol start="3">
+<li>图片压缩</li>
+</ol>
+<blockquote>
+<p><a href="https://tinypng.com/" target="_blank">熊猫压缩</a> </p>
+</blockquote>
+<h3 id="ui组件库"><a href="#ui组件库" class="headerlink" title="ui组件库"></a>ui组件库</h3><p><a href="https://youzan.github.io/vant" target="_blank">vant</a> </p>
+<h3 id="ui设计"><a href="#ui设计" class="headerlink" title="ui设计"></a>ui设计</h3><blockquote>
+<p><a href="https://www.iconfont.cn/" target="_blank">阿里图标</a> <a href="https://loading.io/" target="_blank">loading图标</a>  <a href="https://tinypng.com/" target="_blank">熊猫压缩</a> </p>
+</blockquote>
+<h3 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h3><blockquote>
+<p><a href="https://www.iplaysoft.com" target="_blank">异次元资源免费下载</a></p>
 </blockquote>
 
       
@@ -902,70 +971,10 @@ code.has-numbering {
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2019/04/28/hello-world/" class="article-date">
-      <time datetime="2019-04-28T13:29:48.161Z" itemprop="datePublished">2019-04-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
