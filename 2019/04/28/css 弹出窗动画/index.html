@@ -15,17 +15,18 @@
 
 
 
-<meta name="description" content="输入金额格式化123456789101112131415161718192021222324252627// 置空所有的非数字function  amountFormat(value) &amp;#123;  // 小数点计数  let countDot = 0;  // 格式化数字  let newValue;  // 保留一个小数点，其他小数点非数字置空  newValue = value.repla">
+<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用函数">
-<meta property="og:url" content="http://yoursite.com/2019/08/05/常用函数/index.html">
+<meta property="og:title" content="css 弹出窗动画备份">
+<meta property="og:url" content="http://yoursite.com/2019/04/28/css 弹出窗动画/index.html">
 <meta property="og:site_name" content="何志个人博客">
-<meta property="og:description" content="输入金额格式化123456789101112131415161718192021222324252627// 置空所有的非数字function  amountFormat(value) &amp;#123;  // 小数点计数  let countDot = 0;  // 格式化数字  let newValue;  // 保留一个小数点，其他小数点非数字置空  newValue = value.repla">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-05T00:45:23.273Z">
+<meta property="og:updated_time" content="2019-09-16T12:16:28.752Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用函数">
-<meta name="twitter:description" content="输入金额格式化123456789101112131415161718192021222324252627// 置空所有的非数字function  amountFormat(value) &amp;#123;  // 小数点计数  let countDot = 0;  // 格式化数字  let newValue;  // 保留一个小数点，其他小数点非数字置空  newValue = value.repla">
+<meta name="twitter:title" content="css 弹出窗动画备份">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -96,7 +97,7 @@ code.has-numbering {
 }
 </style>
 
-<title>常用函数 | 何志个人博客</title>
+<title>css 弹出窗动画备份 | 何志个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -300,11 +301,11 @@ code.has-numbering {
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-常用函数" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-css 弹出窗动画" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/08/05/常用函数/" class="article-date">
-      <time datetime="2019-08-05T00:42:15.000Z" itemprop="datePublished">2019-08-05</time>
+      <a href="/2019/04/28/css 弹出窗动画/" class="article-date">
+      <time datetime="2019-04-28T13:53:45.000Z" itemprop="datePublished">2019-04-28</time>
 </a>
 
 
@@ -319,7 +320,7 @@ code.has-numbering {
         
   
     <h1 class="article-title" itemprop="name">
-      常用函数
+      css 弹出窗动画备份
     </h1>
   
 
@@ -329,6 +330,10 @@ code.has-numbering {
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -336,8 +341,11 @@ code.has-numbering {
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="输入金额格式化"><a href="#输入金额格式化" class="headerlink" title="输入金额格式化"></a>输入金额格式化</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 置空所有的非数字</span></span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="title">amountFormat</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 小数点计数</span></span><br><span class="line">  <span class="keyword">let</span> countDot = <span class="number">0</span>;</span><br><span class="line">  <span class="comment">// 格式化数字</span></span><br><span class="line">  <span class="keyword">let</span> newValue;</span><br><span class="line">  <span class="comment">// 保留一个小数点，其他小数点非数字置空</span></span><br><span class="line">  newValue = value.replace(<span class="regexp">/\D/g</span>, (old, newval) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(old, newval);</span><br><span class="line">    <span class="keyword">if</span> (old === <span class="string">'.'</span> &amp;&amp; countDot &lt; <span class="number">1</span>) &#123;</span><br><span class="line">      countDot += <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">return</span> old === <span class="string">'.'</span> ? <span class="string">'.'</span> : <span class="string">''</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">// 当第一位为. 0的时候</span></span><br><span class="line">  <span class="keyword">if</span> (newValue === <span class="string">'.'</span>) &#123;</span><br><span class="line">    newValue = <span class="string">'0.'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 保留两位小数</span></span><br><span class="line">  <span class="keyword">if</span> (newValue.indexOf(<span class="string">'.'</span>) !== <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> index = newValue.indexOf(<span class="string">'.'</span>);</span><br><span class="line">    newValue = newValue.substring(<span class="number">0</span>, index + <span class="number">3</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.amount);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newValue</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="闭包实践-设置私有变量"><a href="#闭包实践-设置私有变量" class="headerlink" title="闭包实践 设置私有变量"></a>闭包实践 设置私有变量</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cls</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.a = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        getValue:<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span>.a</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> cls;</span><br><span class="line">o.getValue(); <span class="comment">//100</span></span><br><span class="line"><span class="comment">//a 在外面永远无法访问到</span></span><br></pre></td></tr></table></figure>
+        <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.pupop</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">-webkit-animation</span>: appearance <span class="number">0.2s</span> linear <span class="number">1</span> forwards;</span><br><span class="line">    <span class="attribute">animation</span>: appearance <span class="number">0.2s</span> linear <span class="number">1</span> forwards;</span><br><span class="line">    // animation-direction: alternate-reverse;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.pupop-wrap</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">-webkit-animation</span>: bounce <span class="number">0.32s</span> linear <span class="number">1</span> forwards;</span><br><span class="line">    <span class="attribute">animation</span>: bounce <span class="number">0.32s</span> linear <span class="number">1</span> forwards;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> appearance</span><br><span class="line">&#123;</span><br><span class="line">    0%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    50%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    100%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">keyframes</span> appearance</span><br><span class="line">&#123;</span><br><span class="line">    0%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    50%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    100%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> bounce</span><br><span class="line">&#123;</span><br><span class="line">    0%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(0);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(0);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    20%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(0.1);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(0.1);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    70%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(1.1);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(1.1);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">        // transform: translateY(40%);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    100%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(1);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(1);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">        // transform: translateY(20%);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">keyframes</span> bounce</span><br><span class="line">&#123;</span><br><span class="line">    0%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(0);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(0);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    20%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(0.1);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(0.1);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    70%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(1.1);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(1.1);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    100%</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(1);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%) <span class="built_in">scale</span>(1);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用方法 增加class pupop pupop-wrap</p>
+</blockquote>
+
       
     </div>
     
@@ -345,13 +353,13 @@ code.has-numbering {
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/08/05/常用函数/">常用函数</a></p>
+        <p><span>本文标题:</span><a href="/2019/04/28/css 弹出窗动画/">css 弹出窗动画备份</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">大志 何</a></p>
-        <p><span>发布时间:</span>2019-08-05, 08:42:15</p>
-        <p><span>最后更新:</span>2019-08-05, 08:45:23</p>
+        <p><span>发布时间:</span>2019-04-28, 21:53:45</p>
+        <p><span>最后更新:</span>2019-09-16, 20:16:28</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/08/05/常用函数/" title="常用函数">http://yoursite.com/2019/08/05/常用函数/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/08/05/常用函数/　　作者: 大志 何" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/04/28/css 弹出窗动画/" title="css 弹出窗动画备份">http://yoursite.com/2019/04/28/css 弹出窗动画/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/04/28/css 弹出窗动画/　　作者: 大志 何" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -363,10 +371,16 @@ code.has-numbering {
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/04/28/css01/">
+                    css基础特性-第一章
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/07/05/常用的第三方库备份/">
-                    常用的第三方库备份
+                <a href="/2019/04/28/hello-world/">
+                    Hello World
                 </a>
             </div>
         
@@ -378,7 +392,7 @@ code.has-numbering {
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#输入金额格式化"><span class="toc-number">1.</span> <span class="toc-text">输入金额格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#闭包实践-设置私有变量"><span class="toc-number">2.</span> <span class="toc-text">闭包实践 设置私有变量</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -414,7 +428,7 @@ code.has-numbering {
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"常用函数　| 何志个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"css 弹出窗动画备份　| 何志个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -448,13 +462,15 @@ code.has-numbering {
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/04/28/css01/" title="上一篇: css基础特性-第一章">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/07/05/常用的第三方库备份/" title="下一篇: 常用的第三方库备份">
+            <a href="/2019/04/28/hello-world/" title="下一篇: Hello World">
                 <i class="fa fa-angle-right"></i>
             </a>
         
