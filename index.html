@@ -303,6 +303,167 @@ code.has-numbering {
 </nav>
       <div class="body-wrap">
   
+    <article id="ios-音频流" class="article article-type-ios" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/09/18/音频流/" class="article-date">
+      <time datetime="2019-09-18T11:37:04.000Z" itemprop="datePublished">2019-09-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/18/音频流/">音频流</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>ios音频无法自动播放</p>
+<ol>
+<li>业务场景</li>
+</ol>
+<blockquote>
+<p>参加活动需要自动播放音频</p>
+</blockquote>
+<ol start="2">
+<li>业务问题</li>
+</ol>
+<blockquote>
+<p>安卓大部分机型没有问题, ios由于安全策略的限制(个人觉得 流量，用户体验方面的考虑)，无法自动播放音频。</p>
+</blockquote>
+<ol start="3">
+<li>解决方案（api 可以参考微信api）</li>
+</ol>
+<blockquote>
+<p>由客户端来播放音频（客户端提供jsapi）</p>
+</blockquote>
+<ol start="4">
+<li>代码</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">主流支持格式 Ogg Vorbis 和 AAC </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">&lt;audio id=<span class="string">"audio"</span>&gt;</span><br><span class="line">    &lt;source src=<span class="string">"sound.AAC"</span> type=<span class="string">"audio/mpeg"</span> /&gt;</span><br><span class="line">    &lt;source src=<span class="string">"sound.ogg"</span> type=<span class="string">"audio/ogg"</span> /&gt;</span><br><span class="line">    &lt;source src=<span class="string">"sound.mp4"</span> type=<span class="string">"audio/ogg"</span> /&gt;</span><br><span class="line">&lt;<span class="regexp">/audio&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">var audio = document.getElementById('audio');</span></span><br><span class="line"><span class="regexp">audio.load(); /</span><span class="regexp">/ 部分手机需要load </span></span><br><span class="line"><span class="regexp">audio.play(); /</span><span class="regexp">/ ios 不会自动播放</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>ios h5音频无法自动播放 折中解决方案</li>
+</ol>
+<blockquote>
+<p>通过用户的触摸 点击 等用户主动操作来触发视屏播放</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> onClick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    audio.play(); <span class="comment">// audio will load and then play</span></span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">button.addEventListener(<span class="string">'click'</span>, onClick, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>不适用的业务场景</li>
+</ol>
+<blockquote>
+<p>多段视屏组合播放，摇一摇</p>
+</blockquote>
+<ol start="7">
+<li>注意点</li>
+</ol>
+<blockquote>
+<p>ios 手机摇动事件（http）</p>
+</blockquote>
+<ol start="8">
+<li>http与https协议对音频的影响</li>
+</ol>
+<blockquote>
+<p> http协议下 ios音频无法播放（用户手动触发也无法播放）</p>
+</blockquote>
+<blockquote>
+<p> http协议下 手机摇动事件不支持</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'devicemotion'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 设备运动</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"deviceorientation"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 设备方向</span></span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-ios音频无法自动播放" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/09/18/ios音频无法自动播放/" class="article-date">
+      <time datetime="2019-09-18T11:34:33.000Z" itemprop="datePublished">2019-09-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/18/ios音频无法自动播放/">ios音频无法自动播放</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="css-弹出窗动画" class="article article-type-css" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -841,121 +1002,6 @@ code.has-numbering {
       
 
       
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-flutter-api" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/04/29/flutter-api/" class="article-date">
-      <time datetime="2019-04-29T14:33:49.000Z" itemprop="datePublished">2019-04-29</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/29/flutter-api/">flutter-api</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-css01" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/04/28/css01/" class="article-date">
-      <time datetime="2019-04-28T13:53:45.000Z" itemprop="datePublished">2019-04-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/28/css01/">css基础特性-第一章</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><img src="https://img2018.cnblogs.com/blog/1157035/201904/1157035-20190428231658350-2094125163.jpg" alt="你想输入的替代文字"></p>
-<h2 id="css元素类型"><a href="#css元素类型" class="headerlink" title="css元素类型"></a>css元素类型</h2><h3 id="css-盒模型"><a href="#css-盒模型" class="headerlink" title="css 盒模型"></a>css 盒模型</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-    </div>
-
       
       <div class="clearfix"></div>
     </div>
