@@ -1,11 +1,11 @@
 {
   "code":"00",
   "data": [
-    { name: "美元债LOF", code: "501300", minAdndmax: "100-100", status: "可以申购", premium: "5.38%", time: "T+5", changnei: "不支持", fee: "1.58%" },
-    { name: "海外科技LOF", code: "501312", minAdndmax: "1000-400000", status: "可以申购", premium: "低于5%", time: "T+3", changnei: "支持", fee: "2.7%" },
-    { name: "黄金LOF", code: "164701", minAdndmax: "100-5000", status: "可以申购", premium: "低于5%", time: "T+3", changnei: "支持", fee: "2.3%" },
-    { name: "嘉实黄金LOF", code: "160719", minAdndmax: "100-5000", status: "可以申购", premium: "低于5%", time: "T+3", changnei: "支持", fee: "2.3%" },
-    { name: "标普信息科技LOF", code: "161128", minAdndmax: "100-100", status: "暂停申购", premium: "低于5%", time: "T+3", changnei: "支持", fee: "2.7%" },
-    { name: "印度基金LOF", code: "164824", minAdndmax: "100-100", status: "暂停申购", premium: "低于5%", time: "T+3", changnei: "支持", fee: "2.7%" }
+    { name: "美元债LOF", code: "501300", minAdndmax: "100-100", status: "开门", premium: "4.99%", time: "T+5", changnei: "不支持", fee: "1.58%" },
+    { name: "海外科技LOF", code: "501312", minAdndmax: "1000-400000", status: "开门", premium: "低于5%", time: "T+3", changnei: "支持", fee: "2.7%" },
+    { name: "黄金LOF", code: "164701", minAdndmax: "100-5000", status: "开门", premium: "低于5%", time: "T+3", changnei: "支持", fee: "2.3%" },
+    { name: "嘉实黄金LOF", code: "160719", minAdndmax: "100-5000", status: "开门", premium: "低于5%", time: "T+3", changnei: "支持", fee: "2.3%" },
+    { name: "标普信息科技LOF", code: "161128", minAdndmax: "100-100", status: "关门", premium: "低于5%", time: "T+3", changnei: "支持", fee: "2.7%" },
+    { name: "印度基金LOF", code: "164824", minAdndmax: "100-100", status: "关门", premium: "低于5%", time: "T+3", changnei: "支持", fee: "2.7%" }
   ]
 }
