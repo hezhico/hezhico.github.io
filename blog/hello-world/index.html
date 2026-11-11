@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.4.10"><title>开张：把写字的地方重新搭一遍 · 何志</title><meta name="description" content="换掉手写的单页，用 Astro 重新搭一个能长期写下去的静态博客——顺手记下这套取舍。"><meta name="author" content="何志"><link rel="canonical" href="https://heyoucai.site/blog/hello-world/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="alternate" type="application/rss+xml" title="何志 · 人間修仙" href="/rss.xml"><meta name="theme-color" content="#0a0a0f"><meta name="color-scheme" content="dark"><meta property="og:type" content="article"><meta property="og:site_name" content="何志 · 人間修仙"><meta property="og:title" content="开张：把写字的地方重新搭一遍 · 何志"><meta property="og:description" content="换掉手写的单页，用 Astro 重新搭一个能长期写下去的静态博客——顺手记下这套取舍。"><meta property="og:url" content="https://heyoucai.site/blog/hello-world/"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2026-11-11T00:00:00.000Z"><meta property="article:tag" content="建站"><meta property="article:tag" content="Astro"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="开张：把写字的地方重新搭一遍 · 何志"><meta name="twitter:description" content="换掉手写的单页，用 Astro 重新搭一个能长期写下去的静态博客——顺手记下这套取舍。"><script>
+	// 首屏无闪烁：URL 带 hash 时让锚点略下移，避开吸顶导航
+	document.addEventListener('DOMContentLoaded', () => {
+		if (!location.hash) return;
+		const el = document.querySelector(location.hash);
+		if (el) el.scrollIntoView({ block: 'start' });
+	});
+</script><link rel="stylesheet" href="/_astro/Base.jtIMoFmq.css"></head><body id="top"><header class="site-header"><div class="header-inner"><a class="brand" href="/">何志 · 人間修仙</a><nav class="nav" aria-label="主导航"><a href="/blog/" aria-current="page">文章</a><a href="/archive/">归档</a><a href="/tags/">标签</a><a href="/about/">关于</a></nav></div></header><main class="main"><article><header class="post-header"><h1>开张：把写字的地方重新搭一遍</h1><div class="post-meta"><time datetime="2026-11-11T00:00:00.000Z">2026 年 11 月 11 日</time><span class="post-tags"><a href="/tags/%E5%BB%BA%E7%AB%99/">#建站</a> · <a href="/tags/Astro/">#Astro</a></span></div></header><div class="post-layout"><div class="prose"><p>旧的站点是手写的：一个 <code>index.html</code>，四篇文章各占一个 HTML 文件，改一个字要动三个地方。能用，但每写一篇都像在给自己加活。</p>
+<p>所以这次换了做法——把内容交给 Markdown，把渲染交给构建工具，把发布交给 Git。</p>
+<h2 id="为什么是静态站">为什么是静态站</h2>
+<p>博客的负载模型极其简单：读多、写少、几乎不需要登录。这种场景下，动态站点的实时渲染、数据库连接、缓存穿透全都是白付的成本。</p>
+<p>静态站把这一切压平成「一堆已经生成好的 HTML 文件」：</p>
+<ul>
+<li>首屏不需要等待后端，CDN 边缘直接吐文件</li>
+<li>没有数据库，就没有注入、没有连接池、没有备份策略</li>
+<li>没有运行时，服务器挂了也不影响已发布的页面</li>
+</ul>
+<p>代价也明确：<strong>搜索、评论、阅读统计这些需要服务端状态的功能，得另找方案</strong>（或者干脆不要）。</p>
+<h2 id="为什么是-astro">为什么是 Astro</h2>
+<p>选它的核心理由只有一个：<strong>默认零客户端 JavaScript</strong>。</p>
+<p>大多数静态站点生成器会给你一个前端框架的运行时，页面里塞几十 KB 的 hydrate 代码，只为渲染一些本可以静态生成的内容。Astro 反过来——除非你显式声明某个组件需要交互，否则它只输出 HTML 和 CSS。</p>
+<p>内容组织用的是 content collections，frontmatter 有类型校验，写错字段构建时直接报错，而不是上线后才发现某篇文章的日期是 <code>undefined</code>。</p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#CB7676">const </span><span style="color:#BD976A">blog</span><span style="color:#666666"> =</span><span style="color:#80A665"> defineCollection</span><span style="color:#666666">({</span></span>
+<span class="line"><span style="color:#B8A965">	loader</span><span style="color:#666666">: </span><span style="color:#80A665">glob</span><span style="color:#666666">({ </span><span style="color:#B8A965">base</span><span style="color:#666666">: </span><span style="color:#C98A7D77">'</span><span style="color:#C98A7D">./src/content/blog</span><span style="color:#C98A7D77">'</span><span style="color:#666666">, </span><span style="color:#B8A965">pattern</span><span style="color:#666666">: </span><span style="color:#C98A7D77">'</span><span style="color:#C98A7D">**/*.{md,mdx}</span><span style="color:#C98A7D77">'</span><span style="color:#666666"> }),</span></span>
+<span class="line"><span style="color:#B8A965">	schema</span><span style="color:#666666">: </span><span style="color:#BD976A">z</span><span style="color:#666666">.</span><span style="color:#80A665">object</span><span style="color:#666666">({</span></span>
+<span class="line"><span style="color:#B8A965">		title</span><span style="color:#666666">: </span><span style="color:#BD976A">z</span><span style="color:#666666">.</span><span style="color:#80A665">string</span><span style="color:#666666">(),</span></span>
+<span class="line"><span style="color:#B8A965">		pubDate</span><span style="color:#666666">: </span><span style="color:#BD976A">z</span><span style="color:#666666">.</span><span style="color:#BD976A">coerce</span><span style="color:#666666">.</span><span style="color:#80A665">date</span><span style="color:#666666">(),</span></span>
+<span class="line"><span style="color:#B8A965">		tags</span><span style="color:#666666">: </span><span style="color:#BD976A">z</span><span style="color:#666666">.</span><span style="color:#80A665">array</span><span style="color:#666666">(</span><span style="color:#BD976A">z</span><span style="color:#666666">.</span><span style="color:#80A665">string</span><span style="color:#666666">()).</span><span style="color:#80A665">default</span><span style="color:#666666">([]),</span></span>
+<span class="line"><span style="color:#666666">	}),</span></span>
+<span class="line"><span style="color:#666666">});</span></span></code></pre>
+<h2 id="这套站的取舍">这套站的取舍</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>选择</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>渲染</td>
+<td>构建期全量生成</td>
+<td>内容量小，秒级完成</td>
+</tr>
+<tr>
+<td>样式</td>
+<td>单一全局 CSS，手写</td>
+<td>无 Tailwind、无 UI 库，样式可读</td>
+</tr>
+<tr>
+<td>字体</td>
+<td>系统字体栈</td>
+<td>不请求第三方，中文首屏快</td>
+</tr>
+<tr>
+<td>搜索</td>
+<td>暂不做</td>
+<td>几十篇的量，归档页够用</td>
+</tr>
+<tr>
+<td>评论</td>
+<td>暂不做</td>
+<td>想说话会发邮件</td>
+</tr>
+<tr>
+<td>发布</td>
+<td>构建产物直接推 Git</td>
+<td>不依赖 CI，构建在哪跑都一样</td>
+</tr>
+</tbody>
+</table>
+<h2 id="一个刻意的设计">一个刻意的设计</h2>
+<p>全站只用一种光：页面顶部的雾霭。除此之外没有阴影、没有渐变按钮、没有悬停位移之外的动效。</p>
+<p>这是克制，也是偷懒——<strong>当视觉只剩排版和留白时，内容本身就必须撑得住</strong>。写不出东西的时候，至少不会有一个花哨的空壳在替你撑场面。</p>
+<hr>
+<p>先这样。往后每写一篇，就往 <code>src/content/blog/</code> 里扔一个 <code>.md</code> 文件。剩下的，交给构建。</p>
+</div><aside class="toc" aria-label="目录"><p class="toc-title">目录</p><ul><li class="depth-2"><a href="#为什么是静态站">为什么是静态站</a></li><li class="depth-2"><a href="#为什么是-astro">为什么是 Astro</a></li><li class="depth-2"><a href="#这套站的取舍">这套站的取舍</a></li><li class="depth-2"><a href="#一个刻意的设计">一个刻意的设计</a></li></ul></aside></div><nav class="post-nav" aria-label="上下篇"><span></span><span></span></nav></article></main><footer class="site-footer"><div class="footer-inner"><span>© 2026 何志 · 人間修仙</span><div class="footer-links"><a href="/rss.xml">RSS</a><a href="https://github.com/hezhico" rel="me noopener" target="_blank">GitHub</a><a href="#top">回到顶部</a></div></div></footer></body></html>
