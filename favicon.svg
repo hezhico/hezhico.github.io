@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#0a0a0f"/>
-  <circle cx="32" cy="26" r="12" fill="none" stroke="#c8b88a" stroke-width="2"/>
-  <path d="M20 47h24M26 53h12" stroke="#c8b88a" stroke-width="2" stroke-linecap="round" opacity=".75"/>
-  <circle cx="32" cy="26" r="3" fill="#c8b88a" opacity=".9"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#282728" />
+  <text x="32" y="45" text-anchor="middle" font-size="40" font-weight="600"
+        font-family="Songti SC, Noto Serif SC, Microsoft YaHei, serif"
+        fill="#fdfdfd">修</text>
 </svg>

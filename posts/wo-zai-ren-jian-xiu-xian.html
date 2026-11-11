@@ -5,63 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我在人间修仙 · 人間修仙</title>
   <style>
+    :root {
+      --bg: #fdfdfd; --fg: #282728; --accent: #006cac;
+      --muted: #6b7280; --border: #ece9e9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #212737; --fg: #eaedf3; --accent: #ff6b01;
+        --muted: #afb9ca; --border: #343f60;
+      }
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
-      background: #0a0a0f;
-      color: #e0d9c8;
-      font-family: 'Georgia', serif;
-      min-height: 100vh;
+      background: var(--bg); color: var(--fg); min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+      line-height: 1.9;
     }
-    .container {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 80px 24px 120px;
-    }
+    .container { max-width: 720px; margin: 0 auto; padding: 56px 20px 120px; }
     .back {
-      display: inline-block;
-      font-size: 0.8rem;
-      color: rgba(200,184,138,0.4);
-      text-decoration: none;
-      letter-spacing: 0.1em;
-      margin-bottom: 60px;
-      cursor: pointer;
-      transition: color 0.3s;
+      display: inline-block; font-size: 0.86rem; color: var(--muted);
+      text-decoration: none; margin-bottom: 56px; transition: color .2s;
     }
-    .back:hover { color: #c8b88a; }
-    .date {
-      font-size: 0.75rem;
-      color: rgba(200,184,138,0.4);
-      letter-spacing: 0.15em;
-      margin-bottom: 12px;
+    .back:hover { color: var(--accent); }
+    .date { font-size: 0.78rem; color: var(--muted); letter-spacing: .08em; margin-bottom: 10px; }
+    h1 { font-size: clamp(1.5rem, 4vw, 1.9rem); font-weight: 600; color: var(--fg); margin-bottom: 36px; line-height: 1.4; }
+    .content { font-size: 1.02rem; line-height: 2.05; color: var(--fg); white-space: pre-wrap; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 56px 0 20px; }
+    .signature { font-size: 0.8rem; color: var(--muted); letter-spacing: .06em; }
+    /* 旧文归档提示：这些是迁移前的原样文章，未并入新站的标签与目录 */
+    .notice {
+      margin-top: 14px; padding: 10px 14px; border-left: 3px solid var(--border);
+      font-size: 0.78rem; color: var(--muted); line-height: 1.75;
     }
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: #c8b88a;
-      margin-bottom: 48px;
-      letter-spacing: 0.1em;
-    }
-    .content {
-      font-size: 1rem;
-      line-height: 2.2;
-      color: rgba(200,184,138,0.8);
-      white-space: pre-wrap;
-    }
-    .divider {
-      border: none;
-      border-top: 1px solid rgba(200,180,140,0.15);
-      margin: 60px 0;
-    }
-    .signature {
-      font-size: 0.8rem;
-      color: rgba(200,184,138,0.35);
-      letter-spacing: 0.1em;
-    }
+    .notice a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 640px) { .container { padding: 36px 16px 80px; } }
   </style>
 </head>
 <body>
   <div class="container">
-    <a class="back" onclick="history.back()">← 返回</a>
+    <a class="back" href="/">← 回首页</a>
     <div class="date">2026-05-14</div>
     <h1>我在人间修仙</h1>
     <div class="content">世人皆知996，我却日日渡劫忙。
@@ -83,6 +67,7 @@
 渡劫失败？那就再来一轮。</div>
     <hr class="divider">
     <div class="signature">何志 · 人間修仙</div>
+    <p class="notice">这是 2026 年改版前的手写页面，按原样保留，仅换了配色以配合新站。<a href="/posts/">看新版文章 →</a></p>
   </div>
 </body>
 </html>
